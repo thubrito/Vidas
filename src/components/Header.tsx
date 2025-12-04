@@ -34,21 +34,19 @@ export default function Header() {
   return (
     <header
       className={`w-full shadow-md sticky top-0 z-50 transition-colors duration-500 ${
-        isDark
-          ? "bg-[#1A1A1A] text-gray-200"
-          : "bg-gray-50 text-gray-800"
+        isDark ? "bg-[#1A1A1A] text-gray-200" : "bg-gray-50 text-gray-800"
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center py-3 px-6">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Logo NeuralUp" className="h-10 w-10" />
+          <img src={logo} alt="Logo V.I.D.A.S" className="h-10 w-10" />
           <h1
             className={`text-xl md:text-2xl font-semibold transition-colors duration-500 ${
-              isDark ? "text-[#00A67E]" : "text-blue-600"
+              isDark ? "text-[#00A67E]" : "text-[#00A67E]"
             }`}
           >
-            NeuralUp
+            V.I.D.A.S
           </h1>
         </Link>
 
@@ -64,7 +62,9 @@ export default function Header() {
               <Link
                 to="/usuario"
                 className={`font-medium transition-colors duration-500 ${
-                  isDark ? "text-gray-200 hover:text-[#007a5e]" : "text-gray-700 hover:text-indigo-600"
+                  isDark
+                    ? "text-gray-200 hover:text-[#007a5e]"
+                    : "text-gray-700 hover:text-[#00A67E]"
                 }`}
               >
                 Olá, {nome.split(" ")[0]}
@@ -78,23 +78,29 @@ export default function Header() {
                 }`}
                 aria-label="Configurações"
               >
-                <FiSettings className={`text-xl transition-colors duration-500 ${isDark ? "text-gray-300" : "text-gray-600"}`} />
+                <FiSettings
+                  className={`text-xl transition-colors duration-500 ${
+                    isDark ? "text-gray-300" : "text-gray-600"
+                  }`}
+                />
               </button>
 
               {/* Menu Configurações */}
               {menuAberto && (
                 <div
                   className={`absolute right-0 top-12 w-56 shadow-lg rounded-lg border transition-colors duration-500 z-50 ${
-                    isDark
-                      ? "bg-[#3A3A3A] border-[#1A1A1A]"
-                      : "bg-white border-gray-100"
+                    isDark ? "bg-[#3A3A3A] border-[#1A1A1A]" : "bg-white border-gray-100"
                   } animate-fadeIn`}
                 >
                   <div className="flex flex-col py-2">
-                    <button className={`flex items-center justify-between px-4 py-2 transition-colors duration-500 ${
-                      isDark ? "hover:bg-[#4A4A4A] text-gray-200" : "hover:bg-gray-50 text-gray-700"
-                    }`}>
-                      <span className="flex items-center gap-2"><FiGlobe /> Idioma</span>
+                    <button
+                      className={`flex items-center justify-between px-4 py-2 transition-colors duration-500 ${
+                        isDark ? "hover:bg-[#4A4A4A] text-gray-200" : "hover:bg-gray-50 text-gray-700"
+                      }`}
+                    >
+                      <span className="flex items-center gap-2">
+                        <FiGlobe /> Idioma
+                      </span>
                       <span className="text-sm text-[#00A67E]">PT-BR</span>
                     </button>
 
@@ -159,8 +165,8 @@ export default function Header() {
               to="/login"
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors duration-500 ${
                 isDark
-                  ? "bg-indigo-500 hover:bg-indigo-400 text-white"
-                  : "bg-indigo-600 hover:bg-indigo-700 text-white"
+                  ? "bg-[#00A67E] hover:bg-[#007a5e] text-white"
+                  : "bg-[#00A67E] hover:bg-[#007a5e] text-white"
               }`}
             >
               <FiUser />

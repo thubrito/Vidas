@@ -10,11 +10,14 @@ export default function Menu() {
 
   const links = [
     { to: "/", label: "Início" },
+    { to: "/sobre", label: "Sobre" },
+    { to: "/faq", label: "FAQ" },
+    { to: "/contato", label: "Contato" },
   ];
 
   return (
     <div className="relative">
-      {/* Botão de abrir/fechar no mobile */}
+      {/* Botão mobile */}
       <button
         className={`md:hidden text-2xl transition-colors duration-500 ${
           isDark ? "text-gray-100" : "text-indigo-600"
@@ -25,17 +28,17 @@ export default function Menu() {
         {open ? <FiX /> : <FiMenu />}
       </button>
 
-      {/* Menu normal (desktop) */}
+      {/* Menu desktop */}
       <nav className="hidden md:flex gap-6 items-center text-base font-medium">
         {links.map(({ to, label }) => (
           <Link
             key={to}
             to={to}
-            className={`transition-colors duration-0 ${
+            className={`transition-colors duration-500 ${
               location.pathname === to
-                ? "text-[#00c295] font-semibold"
+                ? "text-indigo-500 font-semibold"
                 : isDark
-                ? "text-gray-300 hover:text-[#00A67E]"
+                ? "text-gray-300 hover:text-indigo-500"
                 : "text-gray-700 hover:text-indigo-500"
             }`}
           >

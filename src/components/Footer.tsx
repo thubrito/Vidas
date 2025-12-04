@@ -1,4 +1,4 @@
-import { FaFacebookF, FaInstagram, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { useTheme } from "../context/useTheme.ts";
@@ -19,18 +19,17 @@ export default function Footer() {
         <div>
           <h2
             className={`text-2xl font-bold mb-2 transition-colors duration-500 ${
-              isDark ? "text-gray-100" : "text-indigo-600"
+              isDark ? "text-gray-100" : "text-[#00A67E]"
             }`}
           >
-            NeuralUp
+            V.I.D.A.S
           </h2>
           <p
             className={`text-sm leading-relaxed transition-colors duration-500 ${
               isDark ? "text-gray-400" : "text-gray-600"
             }`}
           >
-            Plataforma de aprendizado inteligente com trilhas personalizadas, 
-            IA leve e recomendações sob medida para seu crescimento profissional.
+            Associação que ajuda crianças com câncer e suas famílias a viver momentos de alegria e esperança.
           </p>
         </div>
 
@@ -46,12 +45,22 @@ export default function Footer() {
           <ul className="space-y-2 text-sm">
             <li>
               <Link
-                to="/integrantes"
+                to="/"
                 className={`transition-colors duration-500 hover:text-[#00A67E] ${
                   isDark ? "text-gray-300" : "text-gray-700"
                 }`}
               >
-                Membros
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/sobre"
+                className={`transition-colors duration-500 hover:text-[#00A67E] ${
+                  isDark ? "text-gray-300" : "text-gray-700"
+                }`}
+              >
+                Sobre
               </Link>
             </li>
             <li>
@@ -62,16 +71,6 @@ export default function Footer() {
                 }`}
               >
                 FAQ
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/sobre"
-                className={`transition-colors duration-500 hover:text-[#00A67E] ${
-                  isDark ? "text-gray-300" : "text-gray-700"
-                }`}
-              >
-                Sobre Nós
               </Link>
             </li>
             <li>
@@ -100,10 +99,10 @@ export default function Footer() {
             <li className="flex items-center gap-2">
               <FiMail className="text-[#00A67E]" />
               <a
-                href="mailto:team@neuralup.com"
+                href="mailto:contato@vidas.org"
                 className="transition-colors duration-500 hover:text-[#00A67E]"
               >
-                team@neuralup.com
+                contato@vidas.org
               </a>
             </li>
             <li
@@ -111,7 +110,7 @@ export default function Footer() {
                 isDark ? "text-gray-400" : "text-gray-600"
               }`}
             >
-              São Paulo, SP — Brasil
+              São Paulo, Brasil
             </li>
           </ul>
         </div>
@@ -126,22 +125,30 @@ export default function Footer() {
             Siga-nos
           </h3>
           <div className="flex gap-4 text-xl">
-            {[
-              { href: "https://facebook.com", icon: <FaFacebookF /> },
-              { href: "https://instagram.com", icon: <FaInstagram /> },
-              { href: "https://linkedin.com", icon: <FaLinkedinIn /> },
-              { href: "https://github.com", icon: <FaGithub /> },
-            ].map((social, i) => (
-              <a
-                key={i}
-                href={social.href}
-                target="_blank"
-                rel="noreferrer"
-                className="transition-colors duration-500 hover:text-[#00A67E]"
-              >
-                {social.icon}
-              </a>
-            ))}
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-colors duration-500 hover:text-[#00A67E]"
+            >
+              <FaFacebookF />
+            </a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-colors duration-500 hover:text-[#00A67E]"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noreferrer"
+              className="transition-colors duration-500 hover:text-[#00A67E]"
+            >
+              <FaLinkedinIn />
+            </a>
           </div>
         </div>
       </div>
@@ -154,7 +161,7 @@ export default function Footer() {
             : "text-gray-500 border-t border-gray-200"
         }`}
       >
-        © {new Date().getFullYear()} NeuralUp — Todos os direitos reservados.
+        © {new Date().getFullYear()} V.I.D.A.S — Todos os direitos reservados.
       </div>
     </footer>
   );
