@@ -1,4 +1,5 @@
-import { FiMail, FiPhone, FiMapPin, FiInstagram, FiLinkedin, FiGithub } from "react-icons/fi";
+// pages/contact.tsx
+import { FiMail, FiPhone, FiInstagram } from "react-icons/fi";
 import { useTheme } from "../context/useTheme";
 
 export default function Contact() {
@@ -14,7 +15,7 @@ export default function Contact() {
     >
       <h1
         className={`text-4xl font-bold mb-10 transition-colors duration-500 ${
-          isDark ? "text-[#00A67E]" : "text-blue-600"
+          isDark ? "text-indigo-600" : "text-blue-600"
         }`}
       >
         Entre em Contato
@@ -25,17 +26,17 @@ export default function Contact() {
           isDark ? "text-gray-300" : "text-gray-700"
         }`}
       >
-        Fale com a equipe <strong>NeuralUp</strong>. Estamos prontos para te ajudar, ouvir suas ideias e resolver qualquer dúvida!
+        Fale com a equipe <strong>V.I.D.A.S</strong>. Estamos prontos para ouvir suas ideias, dúvidas ou sugestões sobre os eventos e ações do projeto!
       </p>
 
-      <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {/* Email */}
         <div
           className={`shadow-xl rounded-2xl p-6 hover:scale-105 transition-transform duration-500 ${
             isDark ? "bg-[#2A2A2A]" : "bg-white"
           }`}
         >
-          <FiMail className="text-5xl text-[#00A67E] mx-auto mb-4" />
+          <FiMail className="text-5xl text-indigo-600 mx-auto mb-4" />
           <h3
             className={`text-xl font-semibold mb-2 transition-colors duration-500 ${
               isDark ? "text-gray-100" : "text-gray-800"
@@ -44,7 +45,7 @@ export default function Contact() {
             E-mail
           </h3>
           <p className={`transition-colors duration-500 ${isDark ? "text-gray-300" : "text-gray-600"}`}>
-            team@neuralup.com
+            contato@vidas.com
           </p>
         </div>
 
@@ -54,7 +55,7 @@ export default function Contact() {
             isDark ? "bg-[#2A2A2A]" : "bg-white"
           }`}
         >
-          <FiPhone className="text-5xl text-[#00A67E] mx-auto mb-4" />
+          <FiPhone className="text-5xl text-indigo-600 mx-auto mb-4" />
           <h3
             className={`text-xl font-semibold mb-2 transition-colors duration-500 ${
               isDark ? "text-gray-100" : "text-gray-800"
@@ -66,60 +67,22 @@ export default function Contact() {
             +55 (11) 99999-9999
           </p>
         </div>
-
-        {/* Localização */}
-        <div
-          className={`shadow-xl rounded-2xl p-6 hover:scale-105 transition-transform duration-500 ${
-            isDark ? "bg-[#2A2A2A]" : "bg-white"
-          }`}
-        >
-          <FiMapPin className="text-5xl text-[#00A67E] mx-auto mb-4" />
-          <h3
-            className={`text-xl font-semibold mb-2 transition-colors duration-500 ${
-              isDark ? "text-gray-100" : "text-gray-800"
-            }`}
-          >
-            Endereço
-          </h3>
-          <p className={`transition-colors duration-500 ${isDark ? "text-gray-300" : "text-gray-600"}`}>
-            São Paulo — SP, Brasil
-          </p>
-        </div>
       </div>
 
-      {/* Redes sociais */}
-      <div className="flex justify-center gap-6 mt-12">
+      {/* Instagram com destaque */}
+      <div className="flex justify-center mt-12">
         <a
           href="https://www.instagram.com/"
           target="_blank"
           rel="noreferrer"
-          className={`transition-colors duration-500 ${
-            isDark ? "text-[#00A67E] hover:text-gray-300" : "text-blue-500 hover:text-blue-700"
+          className={`flex items-center gap-3 px-5 py-3 rounded-full transition-all duration-500 transform hover:scale-105 ${
+            isDark
+              ? "bg-indigo-600 text-white hover:bg-indigo-500"
+              : "bg-blue-500 text-white hover:bg-blue-600"
           }`}
         >
-          <FiInstagram size={30} />
-        </a>
-
-        <a
-          href="https://www.linkedin.com/"
-          target="_blank"
-          rel="noreferrer"
-          className={`transition-colors duration-500 ${
-            isDark ? "text-[#00A67E] hover:text-gray-300" : "text-blue-500 hover:text-blue-700"
-          }`}
-        >
-          <FiLinkedin size={30} />
-        </a>
-
-        <a
-          href="https://github.com/Global-Solution-II-2025"
-          target="_blank"
-          rel="noreferrer"
-          className={`transition-colors duration-500 ${
-            isDark ? "text-[#00A67E] hover:text-gray-300" : "text-blue-500 hover:text-blue-700"
-          }`}
-        >
-          <FiGithub size={30} />
+          <FiInstagram size={28} />
+          <span className="font-semibold text-lg">Siga-nos no Instagram</span>
         </a>
       </div>
     </section>
