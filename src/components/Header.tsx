@@ -29,15 +29,10 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center py-3 px-6">
-        
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="Logo V.I.D.A.S" className="h-10 w-10" />
-          <h1
-            className={`text-xl md:text-2xl font-semibold transition-colors duration-500 ${
-              isDark ? "text-[#2563eb]" : "text-[#2563eb]"
-            }`}
-          >
+          <h1 className={`text-xl md:text-2xl font-semibold transition-colors duration-500 ${isDark ? "text-[#00A67E]" : "text-[#00A67E]"}`}>
             V.I.D.A.S
           </h1>
         </Link>
@@ -54,27 +49,19 @@ export default function Header() {
               <Link
                 to="/usuario"
                 className={`font-medium transition-colors duration-500 ${
-                  isDark
-                    ? "text-gray-200 hover:text-[#1e40af]"
-                    : "text-gray-700 hover:text-[#2563eb]"
+                  isDark ? "text-gray-200 hover:text-[#007a5e]" : "text-gray-700 hover:text-[#00A67E]"
                 }`}
               >
                 Olá, {nome.split(" ")[0]}
               </Link>
 
-              {/* Botão Configurações */}
+              {/* Botão de Configurações */}
               <button
                 onClick={() => setMenuAberto(!menuAberto)}
-                className={`p-2 rounded-full transition-colors duration-500 ${
-                  isDark ? "hover:bg-[#4A4A4A]" : "hover:bg-gray-100"
-                }`}
+                className={`p-2 rounded-full transition-colors duration-500 ${isDark ? "hover:bg-[#4A4A4A]" : "hover:bg-gray-100"}`}
                 aria-label="Configurações"
               >
-                <FiSettings
-                  className={`text-xl transition-colors duration-500 ${
-                    isDark ? "text-gray-300" : "text-gray-600"
-                  }`}
-                />
+                <FiSettings className={`text-xl transition-colors duration-500 ${isDark ? "text-gray-300" : "text-gray-600"}`} />
               </button>
 
               {/* Menu Configurações */}
@@ -85,46 +72,32 @@ export default function Header() {
                   } animate-fadeIn`}
                 >
                   <div className="flex flex-col py-2">
-                    {/* Idioma */}
                     <button
                       className={`flex items-center justify-between px-4 py-2 transition-colors duration-500 ${
-                        isDark
-                          ? "hover:bg-[#4A4A4A] text-gray-200"
-                          : "hover:bg-gray-50 text-gray-700"
+                        isDark ? "hover:bg-[#4A4A4A] text-gray-200" : "hover:bg-gray-50 text-gray-700"
                       }`}
                     >
                       <span className="flex items-center gap-2">
                         <FiGlobe /> Idioma
                       </span>
-                      <span className="text-sm text-[#2563eb]">PT-BR</span>
+                      <span className="text-sm text-[#00A67E]">PT-BR</span>
                     </button>
 
-                    {/* Tema */}
+                    {/* Alternar tema */}
                     <button
                       onClick={toggleTheme}
                       className={`flex items-center justify-between px-4 py-2 transition-colors duration-500 ${
-                        isDark
-                          ? "hover:bg-[#4A4A4A] text-gray-200"
-                          : "hover:bg-gray-50 text-gray-700"
+                        isDark ? "hover:bg-[#4A4A4A] text-gray-200" : "hover:bg-gray-50 text-gray-700"
                       }`}
                     >
                       <span className="flex items-center gap-2">
                         {isDark ? <FiMoon /> : <FiSun />} Tema
                       </span>
-                      <div
-                        className={`w-10 h-5 flex items-center rounded-full p-1 transition-colors duration-500 ${
-                          isDark ? "bg-[#2563eb]" : "bg-gray-300"
-                        }`}
-                      >
-                        <div
-                          className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-500 ${
-                            isDark ? "translate-x-5" : ""
-                          }`}
-                        ></div>
+                      <div className={`w-10 h-5 flex items-center rounded-full p-1 transition-colors duration-500 ${isDark ? "bgindigo-600" : "bg-gray-300"}`}>
+                        <div className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-500 ${isDark ? "translate-x-5" : ""}`}></div>
                       </div>
                     </button>
 
-                    {/* Logout */}
                     <button
                       onClick={handleLogout}
                       className="flex items-center gap-2 px-4 py-2 text-red-500 hover:bg-[#4A4A4A] transition-colors duration-500"
@@ -139,9 +112,7 @@ export default function Header() {
             <Link
               to="/login"
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors duration-500 ${
-                isDark
-                  ? "bg-[#2563eb] hover:bg-[#1e40af] text-white"
-                  : "bg-[#2563eb] hover:bg-[#1e40af] text-white"
+                isDark ? "bg-[#00A67E] hover:bg-[#007a5e] text-white" : "bg-[#00A67E] hover:bg-[#007a5e] text-white"
               }`}
             >
               <FiUser />
@@ -152,11 +123,7 @@ export default function Header() {
       </div>
 
       {/* Menu Mobile */}
-      <div
-        className={`md:hidden border-t transition-colors duration-500 ${
-          isDark ? "border-gray-700 bg-gray-900" : "border-gray-200 bg-gray-50"
-        } px-4 py-2`}
-      >
+      <div className={`md:hidden border-t transition-colors duration-500 ${isDark ? "border-gray-700 bg-gray-900" : "border-gray-200 bg-gray-50"} px-4 py-2`}>
         <Menu />
       </div>
     </header>

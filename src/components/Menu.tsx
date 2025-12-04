@@ -11,6 +11,7 @@ export default function Menu() {
   const links = [
     { to: "/", label: "Início" },
     { to: "/sobre", label: "Sobre" },
+    { to: "/fotos", label: "Fotos" },
     { to: "/faq", label: "FAQ" },
     { to: "/contato", label: "Contato" },
   ];
