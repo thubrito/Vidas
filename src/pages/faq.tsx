@@ -5,44 +5,34 @@ import { useTheme } from "../context/useTheme";
 
 const faqs = [
   {
-    question: "O que é o NeuralUp?",
+    question: "O que é o projeto V.I.D.A.S?",
     answer:
-      "O NeuralUp é uma plataforma de aprendizado inteligente com trilhas personalizadas e recomendações baseadas em IA para melhorar seu desempenho cognitivo e profissional.",
+      "O V.I.D.A.S é um projeto social que realiza eventos e ações voltados para a comunidade, com o objetivo de gerar aprendizado, integração e bem-estar para todos os participantes.",
   },
   {
-    question: "Como funciona a IA do NeuralUp?",
+    question: "Como os eventos do projeto funcionam?",
     answer:
-      "A IA analisa seu comportamento e progresso para sugerir conteúdos e exercícios que aumentem seu foco, memória e produtividade de forma personalizada.",
+      "Todos os eventos do V.I.D.A.S são organizados e mantidos graças às doações de pessoas ou empresas que desejam apoiar a causa.",
   },
   {
-    question: "Meus dados estão seguros?",
+    question: "Como posso ajudar ou doar para o projeto?",
     answer:
-      "Sim! Todos os dados são criptografados e utilizados apenas para melhorar sua experiência na plataforma, respeitando a sua privacidade.",
+      "Você pode contribuir acessando a página de doações. Sua colaboração permite que mais eventos e ações cheguem a mais pessoas.",
   },
   {
-    question: "Em quais dispositivos posso acessar o NeuralUp?",
+    question: "Quem pode participar das ações do projeto?",
     answer:
-      "Você pode acessar via navegador em desktop ou dispositivos móveis, com uma experiência otimizada para todos os tamanhos de tela.",
+      "Todos que tiverem interesse podem participar. Envie uma mensagem para algum dos nossos colaboradores e agende sua visita ao próximo evento.",
   },
   {
-    question: "Como posso acompanhar meu progresso?",
+    question: "Como posso acompanhar novidades do projeto?",
     answer:
-      "O NeuralUp oferece dashboards e gráficos que mostram seu desempenho em cada trilha, permitindo acompanhar sua evolução ao longo do tempo.",
+      "Você pode visitar nossas redes sociais e nossa página de fotos, onde divulgamos próximos eventos, fotos e informações sobre as ações do projeto.",
   },
   {
-    question: "Posso personalizar meus objetivos?",
+    question: "O projeto é seguro e confiável?",
     answer:
-      "Sim! Você pode definir metas e áreas de foco, e a plataforma vai adaptar recomendações e exercícios para atingir esses objetivos.",
-  },
-  {
-    question: "Há suporte caso eu tenha dúvidas?",
-    answer:
-      "Sim! Você pode entrar em contato via chat ou e-mail, e nossa equipe estará pronta para ajudar com qualquer questão ou dificuldade.",
-  },
-  {
-    question: "Como melhorar minha experiência na plataforma?",
-    answer:
-      "Para tirar o máximo proveito, complete as trilhas recomendadas, acompanhe seu progresso regularmente e interaja com os exercícios de forma consistente.",
+      "Sim! Todas as ações são planejadas com cuidado e responsabilidade, garantindo que os participantes tenham uma experiência positiva e segura.",
   },
 ];
 
@@ -62,10 +52,10 @@ export default function FAQ() {
     >
       <h1
         className={`text-4xl font-bold mb-12 transition-colors duration-500 ${
-          isDark ? "text-[#00A67E]" : "text-indigo-600"
+          isDark ? "text-indigo-600" : "text-indigo-600"
         }`}
       >
-        Perguntas Frequentes
+        Perguntas Frequentes sobre o V.I.D.A.S
       </h1>
 
       <div className="max-w-3xl w-full space-y-4">
@@ -102,6 +92,22 @@ export default function FAQ() {
           </div>
         ))}
       </div>
+
+      <p
+        className={`mt-12 text-center max-w-3xl text-sm sm:text-base ${
+          isDark ? "text-gray-300" : "text-gray-700"
+        }`}
+      >
+        Quer ajudar a manter os eventos do projeto V.I.D.A.S? Faça uma doação
+        visitando nossa{" "}
+        <a
+          href="/doacao"
+          className={`underline ${isDark ? "text-blue-400" : "text-blue-600"}`}
+        >
+          página de doações
+        </a>
+        . Toda contribuição ajuda a levar mais eventos e ações para a comunidade!
+      </p>
     </div>
   );
 }
