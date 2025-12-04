@@ -62,7 +62,7 @@ export default function Home() {
       {/* Banner */}
       <section className="mt-12 sm:mt-16 max-w-5xl w-full">
         <img
-          src="https://images.unsplash.com/photo-1580281658629-7c67cf02f286?auto=format&fit=crop&w=1200&q=60"
+          src="./assets/FotoVoluntarios.jpg"
           alt="Evento do projeto V.I.D.A.S"
           className="w-full rounded-2xl shadow-lg object-cover"
         />
