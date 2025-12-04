@@ -18,7 +18,7 @@ export default function Contact() {
           isDark ? "text-indigo-600" : "text-blue-600"
         }`}
       >
-        Entre em Contato
+        Entre em contato conosco!
       </h1>
 
       <p
