@@ -1,14 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import {
-  FiUser,
-  FiSettings,
-  FiMoon,
-  FiSun,
-  FiGlobe,
-  FiEye,
-  FiEyeOff,
-  FiLogOut,
-} from "react-icons/fi";
+import { FiUser, FiSettings, FiMoon, FiSun, FiGlobe, FiLogOut } from "react-icons/fi";
 import { useEffect, useState } from "react";
 import Menu from "./Menu";
 import logo from "/favicon.png";
@@ -18,7 +9,7 @@ export default function Header() {
   const navigate = useNavigate();
   const [nome, setNome] = useState<string | null>(null);
   const [menuAberto, setMenuAberto] = useState(false);
-  const { isDark, toggleTheme, isHighContrast, toggleContrast } = useTheme();
+  const { isDark, toggleTheme } = useTheme();
 
   useEffect(() => {
     const storedNome = localStorage.getItem("nome");
@@ -38,12 +29,13 @@ export default function Header() {
       }`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center py-3 px-6">
+        
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
           <img src={logo} alt="Logo V.I.D.A.S" className="h-10 w-10" />
           <h1
             className={`text-xl md:text-2xl font-semibold transition-colors duration-500 ${
-              isDark ? "text-[#00A67E]" : "text-[#00A67E]"
+              isDark ? "text-[#2563eb]" : "text-[#2563eb]"
             }`}
           >
             V.I.D.A.S
@@ -63,14 +55,14 @@ export default function Header() {
                 to="/usuario"
                 className={`font-medium transition-colors duration-500 ${
                   isDark
-                    ? "text-gray-200 hover:text-[#007a5e]"
-                    : "text-gray-700 hover:text-[#00A67E]"
+                    ? "text-gray-200 hover:text-[#1e40af]"
+                    : "text-gray-700 hover:text-[#2563eb]"
                 }`}
               >
                 Olá, {nome.split(" ")[0]}
               </Link>
 
-              {/* Botão de Configurações */}
+              {/* Botão Configurações */}
               <button
                 onClick={() => setMenuAberto(!menuAberto)}
                 className={`p-2 rounded-full transition-colors duration-500 ${
@@ -93,22 +85,27 @@ export default function Header() {
                   } animate-fadeIn`}
                 >
                   <div className="flex flex-col py-2">
+                    {/* Idioma */}
                     <button
                       className={`flex items-center justify-between px-4 py-2 transition-colors duration-500 ${
-                        isDark ? "hover:bg-[#4A4A4A] text-gray-200" : "hover:bg-gray-50 text-gray-700"
+                        isDark
+                          ? "hover:bg-[#4A4A4A] text-gray-200"
+                          : "hover:bg-gray-50 text-gray-700"
                       }`}
                     >
                       <span className="flex items-center gap-2">
                         <FiGlobe /> Idioma
                       </span>
-                      <span className="text-sm text-[#00A67E]">PT-BR</span>
+                      <span className="text-sm text-[#2563eb]">PT-BR</span>
                     </button>
 
-                    {/* Alternar tema */}
+                    {/* Tema */}
                     <button
                       onClick={toggleTheme}
                       className={`flex items-center justify-between px-4 py-2 transition-colors duration-500 ${
-                        isDark ? "hover:bg-[#4A4A4A] text-gray-200" : "hover:bg-gray-50 text-gray-700"
+                        isDark
+                          ? "hover:bg-[#4A4A4A] text-gray-200"
+                          : "hover:bg-gray-50 text-gray-700"
                       }`}
                     >
                       <span className="flex items-center gap-2">
@@ -116,7 +113,7 @@ export default function Header() {
                       </span>
                       <div
                         className={`w-10 h-5 flex items-center rounded-full p-1 transition-colors duration-500 ${
-                          isDark ? "bg-[#00A67E]" : "bg-gray-300"
+                          isDark ? "bg-[#2563eb]" : "bg-gray-300"
                         }`}
                       >
                         <div
@@ -127,29 +124,7 @@ export default function Header() {
                       </div>
                     </button>
 
-                    {/* Alternar contraste */}
-                    <button
-                      onClick={toggleContrast}
-                      className={`flex items-center justify-between px-4 py-2 transition-colors duration-500 ${
-                        isDark ? "hover:bg-[#4A4A4A] text-gray-200" : "hover:bg-gray-50 text-gray-700"
-                      }`}
-                    >
-                      <span className="flex items-center gap-2">
-                        {isHighContrast ? <FiEyeOff /> : <FiEye />} Contraste
-                      </span>
-                      <div
-                        className={`w-10 h-5 flex items-center rounded-full p-1 transition-colors duration-500 ${
-                          isHighContrast ? "bg-[#00A67E]" : "bg-gray-300"
-                        }`}
-                      >
-                        <div
-                          className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform duration-500 ${
-                            isHighContrast ? "translate-x-5" : ""
-                          }`}
-                        ></div>
-                      </div>
-                    </button>
-
+                    {/* Logout */}
                     <button
                       onClick={handleLogout}
                       className="flex items-center gap-2 px-4 py-2 text-red-500 hover:bg-[#4A4A4A] transition-colors duration-500"
@@ -165,8 +140,8 @@ export default function Header() {
               to="/login"
               className={`flex items-center gap-2 px-4 py-2 rounded-lg font-medium transition-colors duration-500 ${
                 isDark
-                  ? "bg-[#00A67E] hover:bg-[#007a5e] text-white"
-                  : "bg-[#00A67E] hover:bg-[#007a5e] text-white"
+                  ? "bg-[#2563eb] hover:bg-[#1e40af] text-white"
+                  : "bg-[#2563eb] hover:bg-[#1e40af] text-white"
               }`}
             >
               <FiUser />

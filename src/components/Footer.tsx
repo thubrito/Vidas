@@ -19,7 +19,7 @@ export default function Footer() {
         <div>
           <h2
             className={`text-2xl font-bold mb-2 transition-colors duration-500 ${
-              isDark ? "text-gray-100" : "text-[#00A67E]"
+              isDark ? "text-gray-100" : "text-blue-600"
             }`}
           >
             V.I.D.A.S
@@ -43,46 +43,23 @@ export default function Footer() {
             Links úteis
           </h3>
           <ul className="space-y-2 text-sm">
-            <li>
-              <Link
-                to="/"
-                className={`transition-colors duration-500 hover:text-[#00A67E] ${
-                  isDark ? "text-gray-300" : "text-gray-700"
-                }`}
-              >
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/sobre"
-                className={`transition-colors duration-500 hover:text-[#00A67E] ${
-                  isDark ? "text-gray-300" : "text-gray-700"
-                }`}
-              >
-                Sobre
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/faq"
-                className={`transition-colors duration-500 hover:text-[#00A67E] ${
-                  isDark ? "text-gray-300" : "text-gray-700"
-                }`}
-              >
-                FAQ
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/contato"
-                className={`transition-colors duration-500 hover:text-[#00A67E] ${
-                  isDark ? "text-gray-300" : "text-gray-700"
-                }`}
-              >
-                Contato
-              </Link>
-            </li>
+            {[
+              { to: "/", label: "Home" },
+              { to: "/sobre", label: "Sobre" },
+              { to: "/faq", label: "FAQ" },
+              { to: "/contato", label: "Contato" },
+            ].map(({ to, label }) => (
+              <li key={to}>
+                <Link
+                  to={to}
+                  className={`transition-colors duration-500 hover:text-blue-600 ${
+                    isDark ? "text-gray-300" : "text-gray-700"
+                  }`}
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
 
@@ -97,10 +74,10 @@ export default function Footer() {
           </h3>
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2">
-              <FiMail className="text-[#00A67E]" />
+              <FiMail className="text-blue-600" />
               <a
                 href="mailto:contato@vidas.org"
-                className="transition-colors duration-500 hover:text-[#00A67E]"
+                className="transition-colors duration-500 hover:text-blue-600"
               >
                 contato@vidas.org
               </a>
@@ -125,30 +102,15 @@ export default function Footer() {
             Siga-nos
           </h3>
           <div className="flex gap-4 text-xl">
-            <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noreferrer"
-              className="transition-colors duration-500 hover:text-[#00A67E]"
-            >
-              <FaFacebookF />
-            </a>
-            <a
-              href="https://instagram.com"
-              target="_blank"
-              rel="noreferrer"
-              className="transition-colors duration-500 hover:text-[#00A67E]"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noreferrer"
-              className="transition-colors duration-500 hover:text-[#00A67E]"
-            >
-              <FaLinkedinIn />
-            </a>
+            {[FaFacebookF, FaInstagram, FaLinkedinIn].map((Icon, idx) => (
+              <a
+                key={idx}
+                href="#"
+                className="transition-colors duration-500 hover:text-blue-600"
+              >
+                <Icon />
+              </a>
+            ))}
           </div>
         </div>
       </div>
