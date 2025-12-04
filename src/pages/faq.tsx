@@ -93,21 +93,39 @@ export default function FAQ() {
         ))}
       </div>
 
-      <p
-        className={`mt-12 text-center max-w-3xl text-sm sm:text-base ${
-          isDark ? "text-gray-300" : "text-gray-700"
-        }`}
-      >
-        Quer ajudar a manter os eventos do projeto V.I.D.A.S? Faça uma doação
-        visitando nossa{" "}
-        <a
-          href="/doacao"
-          className={`underline ${isDark ? "text-blue-400" : "text-blue-600"}`}
+      {/* ---------------------- NOVA SEÇÃO DE DOAÇÃO ---------------------- */}
+      <div className="mt-16 w-full flex flex-col items-center">
+        <div
+          className={`max-w-3xl text-center p-6 rounded-2xl shadow-md transition-colors duration-500 ${
+            isDark ? "bg-[#2A2A2A] text-gray-300" : "bg-white text-gray-700"
+          }`}
         >
-          página de doações
-        </a>
-        . Toda contribuição ajuda a levar mais eventos e ações para a comunidade!
-      </p>
+          <h2
+            className={`text-2xl font-semibold mb-3 ${
+              isDark ? "text-indigo-500" : "text-indigo-600"
+            }`}
+          >
+            Apoie o projeto V.I.D.A.S 💙
+          </h2>
+
+          <p className="text-sm sm:text-base">
+            Sua contribuição ajuda a transformar vidas e garantir que mais eventos e ações
+            cheguem às nossas crianças. Faça parte dessa causa!
+          </p>
+
+          <a
+            href="/doacao"
+            className={`mt-5 inline-block px-6 py-3 font-medium rounded-xl transition-all duration-300 hover:scale-105 ${
+              isDark
+                ? "bg-indigo-600 text-white hover:bg-indigo-500"
+                : "bg-indigo-600 text-white hover:bg-indigo-500"
+            }`}
+          >
+            Fazer uma Doação
+          </a>
+        </div>
+      </div>
+      {/* --------------------------------------------------------------- */}
     </div>
   );
 }
