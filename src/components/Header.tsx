@@ -31,7 +31,7 @@ export default function Header() {
         </div>
 
         {/* Botão de Configurações */}
-        <div className="relative">
+        <div className="relative ml-auto">
           <button
             onClick={() => setMenuAberto(!menuAberto)}
             className={`p-2 rounded-full transition-colors duration-500 ${
