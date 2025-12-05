@@ -15,7 +15,7 @@ export default function Header() {
         isDark ? "bg-[#1A1A1A] text-gray-200" : "bg-gray-50 text-gray-800"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center py-3 px-6">
+      <div className="max-w-7xl mx-auto relative flex justify-between items-center py-3 px-6">
 
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
@@ -25,8 +25,8 @@ export default function Header() {
           </h1>
         </Link>
 
-        {/* Menu Desktop */}
-        <div className="hidden md:block">
+        {/* Menu Desktop centralizado */}
+        <div className="hidden md:flex absolute left-1/2 -translate-x-1/2">
           <Menu />
         </div>
 
@@ -82,6 +82,7 @@ export default function Header() {
                     ></div>
                   </div>
                 </button>
+
               </div>
             </div>
           )}
