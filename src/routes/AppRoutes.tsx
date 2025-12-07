@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import Sobre from "../pages/About";
 import FAQ from "../pages/faq";
-import Contact from "../pages/Donates";
+import Contact from "../pages/Contact";
 import Fotos from "../pages/Photos";         
 import WithHeaderFooter from "../components/WithHeaderFooter";
 
