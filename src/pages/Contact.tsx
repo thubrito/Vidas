@@ -1,5 +1,5 @@
 // pages/contact.tsx
-import { FiMail, FiPhone, FiInstagram } from "react-icons/fi";
+import { FiMail, FiPhone, FiInstagram, FiDollarSign } from "react-icons/fi";
 import { useTheme } from "../context/useTheme";
 
 export default function Contact() {
@@ -26,9 +26,11 @@ export default function Contact() {
           isDark ? "text-gray-300" : "text-gray-700"
         }`}
       >
-        Fale com a equipe <strong>V.I.D.A.S</strong>. Estamos prontos para ouvir suas ideias, dúvidas ou sugestões sobre os eventos e ações do projeto!
+        Fale com a equipe <strong>V.I.D.A.S</strong>. Estamos prontos para ouvir
+        suas ideias, dúvidas ou sugestões sobre os eventos e ações do projeto!
       </p>
 
+      {/* Email e Telefone */}
       <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {/* Email */}
         <div
@@ -44,7 +46,7 @@ export default function Contact() {
           >
             E-mail
           </h3>
-          <p className={`transition-colors duration-500 ${isDark ? "text-gray-300" : "text-gray-600"}`}>
+          <p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
             contato@vidas.com
           </p>
         </div>
@@ -63,9 +65,48 @@ export default function Contact() {
           >
             Telefone
           </h3>
-          <p className={`transition-colors duration-500 ${isDark ? "text-gray-300" : "text-gray-600"}`}>
+          <p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
             +55 (11) 99999-9999
           </p>
+        </div>
+      </div>
+
+      {/* PIX abaixo */}
+      <div className="mt-12 flex justify-center">
+        <div
+          className={`shadow-xl rounded-2xl p-6 hover:scale-105 transition-transform duration-500 max-w-md w-full ${
+            isDark ? "bg-[#2A2A2A]" : "bg-white"
+          }`}
+        >
+          <FiDollarSign className="text-5xl text-indigo-600 mx-auto mb-4" />
+          <h3
+            className={`text-xl font-semibold mb-2 transition-colors duration-500 ${
+              isDark ? "text-gray-100" : "text-gray-800"
+            }`}
+          >
+            PIX
+          </h3>
+
+          <p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
+            Chave: pix@vidas.com
+          </p>
+          <p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
+            Banco: Nubank
+          </p>
+          <p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
+            Nome: Projeto V.I.D.A.S
+          </p>
+
+          <button
+            onClick={() => navigator.clipboard.writeText("pix@vidas.com")} /* Alterar com o banco real depois pornecido pelos administradores */
+            className={`mt-4 px-4 py-2 rounded-full font-semibold transition-colors duration-300 hover:scale-105 transform ${
+              isDark
+                ? "bg-indigo-600 text-white hover:bg-indigo-500"
+                : "bg-blue-500 text-white hover:bg-blue-600"
+            }`}
+          >
+            Copiar chave PIX
+          </button>
         </div>
       </div>
 
@@ -82,7 +123,9 @@ export default function Contact() {
           }`}
         >
           <FiInstagram size={28} />
-          <span className="font-semibold text-lg">Siga-nos no Instagram</span>
+          <span className="font-semibold text-lg">
+            Siga-nos no Instagram
+          </span>
         </a>
       </div>
     </section>
