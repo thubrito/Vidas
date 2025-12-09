@@ -10,14 +10,6 @@ const fotosEventos: { [key: string]: { title: string; fotos: string[] } } = {
       "/assets/evento1/img3.jpg",
     ],
   },
-  evento2: {
-    title: "Natal 2025",
-    fotos: [
-      "/assets/evento2/img1.jpg",
-      "/assets/evento2/img2.jpg",
-      "/assets/evento2/img3.jpg",
-    ],
-  },
 };
 
 export default function Fotos() {
