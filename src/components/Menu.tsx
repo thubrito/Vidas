@@ -12,7 +12,7 @@ export default function Menu() {
     { to: "/", label: "Início" },
     { to: "/sobre", label: "Sobre" },
     { to: "/fotos", label: "Fotos" },
-    { to: "/faq", label: "FAQ" },
+    { to: "/questoes", label: "Perguntas" },
     { to: "/contato", label: "Contato" },
   ];
 
