@@ -3,7 +3,7 @@ import Home from "../pages/Home";
 import Sobre from "../pages/About";
 import FAQ from "../pages/Questions";
 import Contact from "../pages/Contact";
-import Fotos from "../pages/Photos";         
+import Fotos from "../pages/Photos";
 import WithHeaderFooter from "../components/WithHeaderFooter";
 
 export default function AppRoutes() {
@@ -13,11 +13,9 @@ export default function AppRoutes() {
       <Route path="/sobre" element={<WithHeaderFooter Component={Sobre} />} />
       <Route path="/questoes" element={<WithHeaderFooter Component={FAQ} />} />
       <Route path="/contato" element={<WithHeaderFooter Component={Contact} />} />
-
-      {/* PÁGINA DE EVENTOS */}
       <Route path="/fotos" element={<WithHeaderFooter Component={Fotos} />} />
 
-      {/* Redirecionamento */}
+      {/* fallback */}
       <Route path="*" element={<WithHeaderFooter Component={Home} />} />
     </Routes>
   );
