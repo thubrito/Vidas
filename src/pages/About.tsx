@@ -18,23 +18,47 @@ import { Link } from "react-router-dom";
 export default function About() {
   const { isDark } = useTheme();
 
-  const distribuicaoAprendizagem = [
-    { name: "Presencial", value: 35 },
-    { name: "Online Interativo", value: 40 },
-    { name: "Vídeo/Aulas Gravadas", value: 15 },
-    { name: "Autodidata/Leitura", value: 10 },
+  const distribuicaoAcoes = [
+    { name: "Festas Temáticas", value: 40 },
+    { name: "Eventos Comemorativos", value: 30 },
+    { name: "Ações em Hospitais", value: 20 },
+    { name: "Datas Especiais", value: 10 },
   ];
 
-  const cores = ["#00A67E", "#008C69", "#33B89A", "#66CAA7"];
+  const cores = ["#2563EB", "#3B82F6", "#60A5FA", "#93C5FD"];
 
-  const evolucaoTaxaDesemprego = [
-    { mes: "Jan/25", taxa: 7.0 },
-    { mes: "Fev/25", taxa: 6.6 },
-    { mes: "Mar/25", taxa: 6.2 },
-    { mes: "Abr/25", taxa: 6.0 },
-    { mes: "Mai/25", taxa: 5.8 },
-    { mes: "Jun/25", taxa: 5.8 },
-    { mes: "Jul/25", taxa: 5.6 },
+  const impactoProjeto = [
+    { ano: "2022", criancas: 40 },
+    { ano: "2023", criancas: 85 },
+    { ano: "2024", criancas: 140 },
+    { ano: "2025", criancas: 210 },
+  ];
+
+  const vidas = [
+    {
+      letra: "V",
+      palavra: "Vitória",
+      img: "/assets/vidas/Vitoria.png",},
+    {
+      letra: "I",
+      palavra: "Igualdade",
+      img: "/assets/vidas/Igualdade.png",
+    },
+    {
+      letra: "D",
+      palavra: "Deus",
+      img: "/assets/vidas/Deus.png",
+    },
+    {
+      letra: "A",
+      palavra: "Amor",
+      img: "/assets/vidas/Amor.png",
+    },
+    {
+      letra: "S",
+      palavra: "Saúde",
+      img: "/assets/vidas/Saude.png",
+    },
   ];
 
   return (
@@ -43,76 +67,76 @@ export default function About() {
         isDark ? "bg-[#1A1A1A] text-gray-200" : "bg-gray-50 text-gray-900"
       }`}
     >
-      {/* Hero */}
+      {/* HERO */}
       <section
-        className={`relative flex flex-col items-center justify-center py-24 px-6 text-center transition-colors duration-500 ${
-          isDark ? "bg-[#1A1A1A]" : "bg-indigo-50"
+        className={`py-24 px-6 text-center ${
+          isDark ? "bg-[#1A1A1A]" : "bg-blue-50"
         }`}
       >
         <h1
           className={`text-5xl font-extrabold mb-6 ${
-            isDark ? "text-[#00A67E]" : "text-indigo-600"
+            isDark ? "text-blue-400" : "text-blue-600"
           }`}
         >
-          Sobre a NeuralUp
+          Sobre o Projeto V.I.D.A.S
         </h1>
         <p
-          className={`max-w-3xl text-lg ${
+          className={`max-w-3xl mx-auto text-lg ${
             isDark ? "text-gray-300" : "text-gray-600"
           }`}
         >
-          A NeuralUp nasceu com a missão de transformar a forma como aprendemos,
-          utilizando tecnologia e estratégias adaptadas — para reduzir ausências,
-          melhorar engajamento e apoiar a evolução profissional.
+          O V.I.D.A.S é um projeto social que leva alegria, esperança e amor para
+          crianças com câncer, promovendo festas, eventos e momentos que ajudam
+          a sair um pouco da dura realidade do tratamento.
         </p>
       </section>
 
-      {/* Missão / Visão / Valores */}
-      <section className="max-w-7xl mx-auto py-20 px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
-        {[
-          {
-            title: "Missão",
-            icon: "🎯",
-            desc: "Potencializar o aprendizado personalizado e acessível para todos, com foco em resultado e bem-estar digital.",
-          },
-          {
-            title: "Visão",
-            icon: "🚀",
-            desc: "Ser referência em plataformas que conectam pessoas a novos patamares de conhecimento e produtividade.",
-          },
-          {
-            title: "Valores",
-            icon: "💡",
-            desc: "Inovação, empatia, crescimento contínuo, ética e excelência na experiência de aprendizagem.",
-          },
-        ].map((item, i) => (
-          <div
-            key={i}
-            className={`rounded-3xl shadow-2xl p-10 hover:scale-105 transition-transform duration-500 ${
-              isDark ? "bg-[#2A2A2A]" : "bg-white"
-            }`}
-          >
-            <div className="text-6xl mb-6">{item.icon}</div>
-            <h3
-              className={`text-2xl font-bold mb-4 ${
-                isDark ? "text-[#00A67E]" : "text-indigo-600"
+      {/* SIGNIFICADO VIDAS */}
+      <section className="max-w-7xl mx-auto py-20 px-6">
+        <h2
+          className={`text-4xl font-extrabold text-center mb-12 ${
+            isDark ? "text-blue-300" : "text-blue-600"
+          }`}
+        >
+          O significado de V.I.D.A.S
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-8">
+          {vidas.map((item, i) => (
+            <div
+              key={i}
+              className={`flex flex-col items-center text-center rounded-3xl shadow-xl p-8 transition-transform duration-300 hover:scale-105 ${
+                isDark ? "bg-[#2A2A2A]" : "bg-white"
               }`}
             >
-              {item.title}
-            </h3>
-            <p
-              className={`${
-                isDark ? "text-gray-300" : "text-gray-600"
-              } transition-colors duration-500`}
-            >
-              {item.desc}
-            </p>
-          </div>
-        ))}
+              <img
+                src={item.img}
+                alt={item.palavra}
+                className="w-20 h-20 mb-4 object-contain"
+              />
+
+              <h3
+                className={`text-2xl font-bold ${
+                  isDark ? "text-blue-300" : "text-blue-600"
+                }`}
+              >
+                {item.letra}
+              </h3>
+
+              <p
+                className={`mt-1 ${
+                  isDark ? "text-gray-300" : "text-gray-600"
+                }`}
+              >
+                {item.palavra}
+              </p>
+            </div>
+          ))}
+        </div>
       </section>
 
-      {/* Gráficos */}
-      <section className="max-w-7xl mx-auto py-20 px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      {/* GRÁFICOS */}
+      <section className="max-w-7xl mx-auto py-20 px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
         <div
           className={`rounded-3xl shadow-2xl p-8 ${
             isDark ? "bg-[#2A2A2A]" : "bg-white"
@@ -120,41 +144,26 @@ export default function About() {
         >
           <h3
             className={`text-2xl font-bold mb-6 ${
-              isDark ? "text-[#00A67E]" : "text-indigo-600"
+              isDark ? "text-blue-300" : "text-blue-600"
             }`}
           >
-            Distribuição de Métodos de Aprendizagem
+            Tipos de Ações Realizadas
           </h3>
+
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
               <Pie
-                data={distribuicaoAprendizagem}
+                data={distribuicaoAcoes}
                 dataKey="value"
                 nameKey="name"
-                cx="50%"
-                cy="50%"
                 outerRadius={100}
                 label
               >
-                {distribuicaoAprendizagem.map((_entry, index) => (
-                  <Cell
-                    key={`cell-${index}`}
-                    fill={cores[index % cores.length]}
-                  />
+                {distribuicaoAcoes.map((_e, i) => (
+                  <Cell key={i} fill={cores[i % cores.length]} />
                 ))}
               </Pie>
-              <Tooltip
-                contentStyle={{
-                  backgroundColor: isDark ? "#2A2A2A" : "#fff",
-                  color: isDark ? "#00A67E" : "#111827",
-                  borderRadius: "8px",
-                  border: "none",
-                  boxShadow: isDark ? "0 0 10px #00A67E50" : "0 0 10px #00000020",
-                }}
-                itemStyle={{
-                  color: isDark ? "#33B89A" : "#111827",
-                }}
-              />
+              <Tooltip />
             </PieChart>
           </ResponsiveContainer>
         </div>
@@ -166,112 +175,57 @@ export default function About() {
         >
           <h3
             className={`text-2xl font-bold mb-6 ${
-              isDark ? "text-[#00A67E]" : "text-indigo-600"
+              isDark ? "text-blue-300" : "text-blue-600"
             }`}
           >
-            Evolução da Taxa de Desemprego no Brasil (%)
+            Crescimento do Impacto
           </h3>
+
           <ResponsiveContainer width="100%" height={300}>
-            <LineChart data={evolucaoTaxaDesemprego}>
-              <CartesianGrid
-                strokeDasharray="3 3"
-                stroke={isDark ? "#444" : "#ddd"}
-              />
-              <XAxis dataKey="mes" stroke={isDark ? "#ccc" : "#555"} />
-              <YAxis stroke={isDark ? "#ccc" : "#555"} />
-              <Tooltip
-                contentStyle={{
-                  backgroundColor: isDark ? "#3A3A3A" : "#fff",
-                  color: isDark ? "#e5e7eb" : "#111827",
-                  borderRadius: "8px",
-                  border: "none",
-                }}
-              />
+            <LineChart data={impactoProjeto}>
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="ano" />
+              <YAxis />
+              <Tooltip />
               <Legend />
               <Line
                 type="monotone"
-                dataKey="taxa"
-                stroke="#00A67E"
+                dataKey="criancas"
+                stroke="#2563EB"
                 strokeWidth={3}
               />
             </LineChart>
           </ResponsiveContainer>
-          <p
-            className={`mt-4 text-sm ${
-              isDark ? "text-gray-400" : "text-gray-500"
-            }`}
-          >
-            Fonte: IBGE — 2º trimestre de 2025.
-          </p>
         </div>
       </section>
 
-      {/* Impactos Reais */}
-      <section className="max-w-7xl mx-auto py-20 px-6 text-center">
-        <h2
-          className={`text-4xl font-extrabold mb-12 ${
-            isDark ? "text-[#00A67E]" : "text-indigo-600"
-          }`}
-        >
-          Impactos Reais
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-          {[
-            { number: "5,8%", label: "Taxa de desemprego no Brasil (2º tri/2025)" },
-            { number: "8,7M", label: "Jovens de 14-29 anos sem ensino médio completo" },
-            { number: "≈18 dias", label: "Média anual de faltas escolares (absenteísmo)" },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className={`rounded-3xl shadow-2xl p-10 hover:scale-105 transition-transform duration-500 ${
-                isDark ? "bg-[#2A2A2A]" : "bg-white"
-              }`}
-            >
-              <h3
-                className={`text-4xl font-bold mb-2 ${
-                  isDark ? "text-gray-200" : "text-indigo-500"
-                }`}
-              >
-                {item.number}
-              </h3>
-              <p
-                className={`${
-                  isDark ? "text-gray-300" : "text-gray-600"
-                } transition-colors duration-500`}
-              >
-                {item.label}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Chamada Final */}
+      {/* CHAMADA FINAL */}
       <section
-        className={`py-20 px-6 text-center transition-colors duration-500 ${
-          isDark ? "bg-[#1A1A1A]" : "bg-indigo-50"
+        className={`py-20 px-6 text-center ${
+          isDark ? "bg-[#1A1A1A]" : "bg-blue-50"
         }`}
       >
         <h2
           className={`text-4xl font-extrabold mb-6 ${
-            isDark ? "text-[#00A67E]" : "text-indigo-600"
+            isDark ? "text-blue-300" : "text-blue-600"
           }`}
         >
-          Junte-se ao Futuro da Aprendizagem!
+          Ajudar o próximo é um ato de Amor!
         </h2>
+
         <p
           className={`max-w-2xl mx-auto mb-8 ${
             isDark ? "text-gray-300" : "text-gray-600"
           }`}
         >
-          Explore caminhos mais eficientes de estudo, engajamento e crescimento
-          — torne o digital um aliado estratégico para você.
+          Faça parte você também, nos ajude a compartilhar sorrisos 💙
         </p>
+
         <Link
           to="/contato"
-          className="inline-block bg-[#00A67E] hover:bg-[#33B89A] text-white font-semibold py-3 px-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-[#33B89A]/30"
+          className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-xl shadow-lg transition-all"
         >
-          Fale Conosco
+          Quero Ajudar
         </Link>
       </section>
     </div>
