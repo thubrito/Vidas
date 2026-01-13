@@ -1,5 +1,5 @@
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { FiMail } from "react-icons/fi";
+import {FaInstagram} from "react-icons/fa";
+import { FiPhone } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { useTheme } from "../context/useTheme.ts";
 
@@ -74,12 +74,12 @@ export default function Footer() {
           </h3>
           <ul className="space-y-2 text-sm">
             <li className="flex items-center gap-2">
-              <FiMail className="text-blue-600" />
+              <FiPhone className="text-blue-600" />
               <a
-                href="mailto:contato@vidas.org"
+                href="tel:+5511982002485"
                 className="transition-colors duration-500 hover:text-blue-600"
               >
-                contato@vidas.org
+                +55 (11) 98200 - 2485
               </a>
             </li>
             <li
@@ -102,7 +102,7 @@ export default function Footer() {
             Siga-nos
           </h3>
           <div className="flex gap-4 text-xl">
-            {[FaFacebookF, FaInstagram, FaLinkedinIn].map((Icon, idx) => (
+            {[FaInstagram].map((Icon, idx) => (
               <a
                 key={idx}
                 href="#"
