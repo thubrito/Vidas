@@ -46,7 +46,7 @@ export default function Footer() {
             {[
               { to: "/", label: "Home" },
               { to: "/sobre", label: "Sobre" },
-              { to: "/faq", label: "FAQ" },
+              { to: "/questoes", label: "Perguntas" },
               { to: "/contato", label: "Contato" },
             ].map(({ to, label }) => (
               <li key={to}>
@@ -105,7 +105,7 @@ export default function Footer() {
             {[FaInstagram].map((Icon, idx) => (
               <a
                 key={idx}
-                href="#"
+                href="https://www.instagram.com/_v.i.d.a.s_/"
                 className="transition-colors duration-500 hover:text-blue-600"
               >
                 <Icon />
