@@ -1,6 +1,5 @@
 // pages/contact.tsx
 import {
-  FiMail,
   FiPhone,
   FiInstagram,
   FiDollarSign,
@@ -42,18 +41,6 @@ export default function Contact() {
 
       {/* EMAIL E TELEFONE */}
       <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-        <div
-          className={`shadow-xl rounded-2xl p-6 transition-transform duration-500 hover:scale-105 ${
-            isDark ? "bg-[#2A2A2A]" : "bg-white"
-          }`}
-        >
-          <FiMail className="text-5xl text-indigo-500 mx-auto mb-4" />
-          <h3 className="text-xl font-semibold mb-2">E-mail</h3>
-          <p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}>
-            contato@vidas.com
-          </p>
-        </div>
-
         <div
           className={`shadow-xl rounded-2xl p-6 transition-transform duration-500 hover:scale-105 ${
             isDark ? "bg-[#2A2A2A]" : "bg-white"
@@ -114,7 +101,7 @@ export default function Contact() {
             Nome: <strong>Andreia da Silva Barbosa Martins</strong>
 
           <p className={`${isDark ? "text-gray-300" : "text-gray-600"}`}></p>
-            Banco: <strong>NU PAGAMENTOS - IP</strong>
+            Banco: <strong>NUBANK</strong>
           </p>
 
           <button
