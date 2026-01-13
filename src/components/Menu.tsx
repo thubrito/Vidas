@@ -1,6 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { FiMenu, FiX } from "react-icons/fi";
 import { useTheme } from "../context/useTheme.ts";
 
 export default function Menu() {
@@ -18,15 +17,33 @@ export default function Menu() {
 
   return (
     <div className="relative">
-      {/* Botão mobile */}
+      {/* Botão mobile animado */}
       <button
-        className={`md:hidden text-2xl transition-colors duration-500 ${
-          isDark ? "text-gray-100" : "text-indigo-600"
-        } focus:outline-none`}
         onClick={() => setOpen(!open)}
         aria-label="Abrir menu"
+        className="md:hidden w-8 h-8 flex flex-col justify-center items-center gap-1 z-50"
       >
-        {open ? <FiX /> : <FiMenu />}
+        <span
+          className={`w-6 h-0.5 rounded transition-all duration-500 ${
+            isDark ? "bg-gray-100" : "bg-indigo-600"
+          } ${
+            open ? "rotate-45 translate-y-1.5" : ""
+          }`}
+        />
+        <span
+          className={`w-6 h-0.5 rounded transition-all duration-500 ${
+            isDark ? "bg-gray-100" : "bg-indigo-600"
+          } ${
+            open ? "opacity-0" : ""
+          }`}
+        />
+        <span
+          className={`w-6 h-0.5 rounded transition-all duration-500 ${
+            isDark ? "bg-gray-100" : "bg-indigo-600"
+          } ${
+            open ? "-rotate-45 -translate-y-1.5" : ""
+          }`}
+        />
       </button>
 
       {/* Menu desktop */}
@@ -39,7 +56,7 @@ export default function Menu() {
               location.pathname === to
                 ? "text-indigo-500 font-semibold"
                 : isDark
-                ? "text-gray-300 hover:text-indigo-500"
+                ? "text-gray-300 hover:text-indigo-400"
                 : "text-gray-700 hover:text-indigo-500"
             }`}
           >
@@ -48,25 +65,27 @@ export default function Menu() {
         ))}
       </nav>
 
-      {/* Menu mobile */}
+      {/* Menu mobile – agora nasce do botão */}
       {open && (
         <nav
-          className={`absolute top-12 left-0 w-48 shadow-lg rounded-lg flex flex-col gap-2 py-3 px-4 md:hidden border transition-colors duration-500 z-40 animate-fadeIn ${
-            isDark ? "bg-[#2A2A2A] border-gray-700" : "bg-white border-gray-100"
+          className={`absolute top-10 left-0 w-48 rounded-xl shadow-xl flex flex-col gap-1 py-3 px-2 md:hidden transition-colors duration-500 z-40 ${
+            isDark
+              ? "bg-[#2A2A2A] border border-gray-700"
+              : "bg-white border border-gray-100"
           }`}
         >
           {links.map(({ to, label }) => (
             <Link
               key={to}
-              onClick={() => setOpen(false)}
               to={to}
-              className={`block py-2 px-2 rounded-md transition-colors duration-500 ${
+              onClick={() => setOpen(false)}
+              className={`block text-center py-2 rounded-lg transition-all duration-300 ${
                 location.pathname === to
                   ? isDark
                     ? "bg-[#3A3A3A] text-white font-semibold"
                     : "bg-indigo-100 text-indigo-600 font-semibold"
                   : isDark
-                  ? "text-gray-300 hover:bg-gray-700"
+                  ? "text-gray-300 hover:bg-[#3A3A3A]"
                   : "text-gray-800 hover:bg-gray-100"
               }`}
             >
