@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>V.I.D.A.S</title>
+  <title>V.I.D.A.S — Transformamos tratamento em dia de festa</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -14,77 +14,158 @@
     <div class="header-inner">
       <a href="index.html" class="brand">
         <img src="assets/favicon.png" alt="Logo V.I.D.A.S" />
-        <h1>V.I.D.A.S</h1>
+        <span>V.I.D.A.S</span>
       </a>
 
       <nav class="nav-desktop">
         <a href="index.html">Início</a>
         <a href="sobre.html">Sobre</a>
         <a href="fotos.html">Fotos</a>
+        <a href="transparencia.html">Transparência</a>
+        <a href="parcerias.html">Parcerias</a>
         <a href="questoes.html">Perguntas</a>
         <a href="contato.html">Contato</a>
       </nav>
 
-      <div class="settings-wrap">
-        <button class="settings-btn" aria-label="Abrir configurações">⚙️</button>
-        <div class="settings-menu">
-          <div class="theme-toggle-row">
-            <span class="label"><span class="theme-icon">☀️</span> Tema</span>
-            <span class="switch"><span class="knob"></span></span>
+      <div class="header-actions">
+        <a href="doe.html" class="btn btn-primary btn-sm">Doe agora 💛</a>
+        <button class="theme-btn" aria-label="Ativar tema escuro"><span class="theme-icon">☀️</span></button>
+        <button class="mobile-toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+
+    <nav class="nav-mobile-menu">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="fotos.html">Fotos</a>
+      <a href="transparencia.html">Transparência</a>
+      <a href="parcerias.html">Parcerias</a>
+      <a href="questoes.html">Perguntas</a>
+      <a href="contato.html">Contato</a>
+      <a href="doe.html" class="btn btn-primary btn-block">Doe agora 💛</a>
+    </nav>
+  </header>
+
+  <svg class="bunting" viewBox="0 0 200 26" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <pattern id="flags-top" width="20" height="26" patternUnits="userSpaceOnUse">
+        <line x1="0" y1="4" x2="20" y2="4" stroke="var(--border-ink)" stroke-width="1" stroke-dasharray="2 2"/>
+        <polygon points="1,4 9,4 5,20" fill="var(--bunting-a)" stroke="var(--border-ink)" stroke-width="1"/>
+        <polygon points="11,4 19,4 15,20" fill="var(--bunting-b)" stroke="var(--border-ink)" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="26" fill="url(#flags-top)" />
+  </svg>
+
+  <!-- ===================== HERO ===================== -->
+  <main>
+    <section class="hero">
+      <div class="balloon-field" aria-hidden="true">
+        <svg class="balloon" style="top:6%; left:4%; color:var(--secondary);" viewBox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30,3 C46,3 53,19 53,32 C53,49 42,61 33,64 C32,66 31,68 31,71 L29,71 C29,68 28,66 27,64 C18,61 7,49 7,32 C7,19 14,3 30,3 Z" fill="currentColor" stroke="var(--border-ink)" stroke-width="2.5"/>
+          <path d="M30,71 C31,75 28,78 30,82 C32,86 29,88 30,90" stroke="var(--border-ink)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        </svg>
+        <svg class="balloon b2" style="top:48%; left:1%; width:46px; color:var(--pink);" viewBox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30,3 C46,3 53,19 53,32 C53,49 42,61 33,64 C32,66 31,68 31,71 L29,71 C29,68 28,66 27,64 C18,61 7,49 7,32 C7,19 14,3 30,3 Z" fill="currentColor" stroke="var(--border-ink)" stroke-width="2.5"/>
+          <path d="M30,71 C31,75 28,78 30,82 C32,86 29,88 30,90" stroke="var(--border-ink)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        </svg>
+        <svg class="balloon b3" style="top:10%; right:5%; width:54px; color:var(--accent);" viewBox="0 0 60 90" xmlns="http://www.w3.org/2000/svg">
+          <path d="M30,3 C46,3 53,19 53,32 C53,49 42,61 33,64 C32,66 31,68 31,71 L29,71 C29,68 28,66 27,64 C18,61 7,49 7,32 C7,19 14,3 30,3 Z" fill="currentColor" stroke="var(--border-ink)" stroke-width="2.5"/>
+          <path d="M30,71 C31,75 28,78 30,82 C32,86 29,88 30,90" stroke="var(--border-ink)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="hero-inner">
+        <div>
+          <span class="eyebrow">🎈 Projeto social desde 2022*</span>
+          <h1>Transformamos o tratamento em <span class="accent">dia de festa</span> 🎉</h1>
+          <p class="lead">
+            O V.I.D.A.S leva alegria, brincadeiras e momentos de esperança para
+            crianças em tratamento de câncer — e para as famílias que estão ao
+            lado delas em cada etapa.
+          </p>
+          <div class="hero-buttons">
+            <a href="doe.html" class="btn btn-primary">Doe agora 💛</a>
+            <a href="sobre.html" class="btn btn-ghost">Conheça nossa história</a>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <div class="hero-photo-frame">
+            <img src="assets/FotoVoluntarios.jpg" alt="Voluntários e crianças em um evento do projeto V.I.D.A.S" />
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div class="nav-mobile-bar">
-      <button class="mobile-toggle" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="nav-mobile-menu">
-        <a href="index.html">Início</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="fotos.html">Fotos</a>
-        <a href="questoes.html">Perguntas</a>
-        <a href="contato.html">Contato</a>
-      </nav>
-    </div>
-  </header>
+    <!-- ===================== ESTATÍSTICAS ===================== -->
+    <section class="section section-tight">
+      <div class="stat-row">
+        <div class="stat-balloon">
+          <span class="num">150+</span>
+          <span class="lbl">crianças impactadas</span>
+        </div>
+        <div class="stat-balloon">
+          <span class="num">32</span>
+          <span class="lbl">eventos realizados</span>
+        </div>
+        <div class="stat-balloon">
+          <span class="num">5</span>
+          <span class="lbl">anos de festa</span>
+        </div>
+        <div class="stat-balloon">
+          <span class="num">100%</span>
+          <span class="lbl">do valor vai para as ações</span>
+        </div>
+      </div>
+      <p style="text-align:center;"><span class="note-example">*números de exemplo — substituir pelos dados reais do projeto</span></p>
+    </section>
 
-  <!-- ===================== CONTEÚDO ===================== -->
-  <main class="home-main">
-    <section class="hero">
-      <h1>Conheça o projeto <span class="accent">V.I.D.A.S</span> 💙</h1>
-      <p>
-        O projeto V.I.D.A.S traz alegria e momentos especiais para crianças
-        com câncer, promovendo festas e eventos que ajudam a esquecer, por
-        algumas horas, sua realidade.
+    <!-- ===================== COMO AJUDAMOS ===================== -->
+    <section class="section">
+      <h2 class="section-title center">Como a festa <span class="accent">ajuda</span> de verdade</h2>
+      <p class="section-lead center">Cada ação é pensada para devolver, por algumas horas, a infância que o tratamento tira de cena.</p>
+
+      <div class="feature-grid">
+        <div class="sticker sticker--coral feature-card">
+          <div class="ico">🎉</div>
+          <h3>Alegria e diversão</h3>
+          <p>Criamos eventos que fazem as crianças sorrirem, brincarem e esquecerem a rotina do hospital.</p>
+        </div>
+        <div class="sticker sticker--teal feature-card">
+          <div class="ico">👨‍👩‍👧</div>
+          <h3>Integração com famílias</h3>
+          <p>Momentos especiais também para pais, irmãos e familiares que enfrentam o tratamento juntos.</p>
+        </div>
+        <div class="sticker sticker--grape feature-card">
+          <div class="ico">🤲</div>
+          <h3>Apoio e cuidado</h3>
+          <p>Cuidamos do bem-estar emocional das crianças, em parceria com quem já cuida da saúde delas.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== DEPOIMENTOS (PREVIEW) ===================== -->
+    <section class="section">
+      <span class="eyebrow">💬 Histórias que nos movem</span>
+      <h2 class="section-title">Quem viveu, <span class="accent">conta</span></h2>
+
+      <div class="testimonial-grid">
+        <div class="sticker sticker--yellow testimonial-card">
+          <div class="quote-mark">“</div>
+          <p class="quote">Por algumas horas, meu filho só pensou em brincar. Foi como se o hospital tivesse ficado longe, só por aquele dia.</p>
+          <div class="who">Mãe de beneficiário<small>depoimento-exemplo, projeto fictício para fins de demonstração</small></div>
+        </div>
+        <div class="sticker sticker--coral testimonial-card">
+          <div class="quote-mark">“</div>
+          <p class="quote">Como voluntária, vejo de perto o quanto uma tarde de festa pode mudar o humor de uma família inteira.</p>
+          <div class="who">Voluntária do projeto<small>depoimento-exemplo, projeto fictício para fins de demonstração</small></div>
+        </div>
+      </div>
+
+      <p style="text-align:center; margin-top:2rem;">
+        <a href="sobre.html#historias" class="btn btn-ghost btn-sm">Ver todas as histórias</a>
       </p>
-      <div class="hero-buttons">
-        <a href="fotos.html" class="btn btn-primary">Ver fotos do projeto</a>
-        <a href="sobre.html" class="btn btn-outline">Saiba mais sobre o projeto</a>
-      </div>
-    </section>
-
-    <section class="home-banner">
-      <img src="assets/FotoVoluntarios.jpg" alt="Evento do projeto V.I.D.A.S" />
-    </section>
-
-    <section class="feature-grid">
-      <div class="feature-card">
-        <div class="feature-icon">🤝</div>
-        <h3>Alegria e diversão</h3>
-        <p>Criamos eventos que fazem as crianças sorrirem e se divertirem.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">👥</div>
-        <h3>Integração com famílias</h3>
-        <p>Momentos especiais também para pais e familiares.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🤲</div>
-        <h3>Apoio e cuidado</h3>
-        <p>Nos preocupamos com o bem-estar emocional e físico das crianças.</p>
-      </div>
     </section>
   </main>
 
@@ -92,38 +173,48 @@
   <footer class="site-footer">
     <div class="footer-grid">
       <div>
-        <h2>V.I.D.A.S</h2>
-        <p>Associação que ajuda crianças com câncer e suas famílias a viver momentos de alegria e esperança.</p>
+        <div class="brand-foot">
+          <img src="assets/favicon.png" alt="Logo V.I.D.A.S" />
+          <span>V.I.D.A.S</span>
+        </div>
+        <p>Associação que transforma o tratamento de crianças com câncer em momentos de festa, alegria e esperança.</p>
       </div>
 
       <div>
-        <h3>Links úteis</h3>
+        <h3>Navegação</h3>
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Início</a></li>
           <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="fotos.html">Fotos</a></li>
           <li><a href="questoes.html">Perguntas</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Doe &amp; participe</h3>
+        <ul class="footer-links">
+          <li><a href="doe.html">Doe agora</a></li>
+          <li><a href="transparencia.html">Transparência</a></li>
+          <li><a href="parcerias.html">Parcerias</a></li>
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </div>
 
       <div>
-        <h3>Contato</h3>
+        <h3>Fale com a gente</h3>
         <ul class="footer-contact">
-          <li>📞 <a href="tel:+5511982002485">+55 (11) 98200 - 2485</a></li>
-          <li>São Paulo, Brasil</li>
+          <li>📞 <a href="tel:+5511982002485">+55 (11) 98200-2485</a></li>
+          <li>📍 São Paulo, Brasil</li>
         </ul>
-      </div>
-
-      <div>
-        <h3>Siga-nos</h3>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/_v.i.d.a.s_/" target="_blank" rel="noreferrer">📷</a>
+        <div class="footer-social" style="margin-top:.75rem;">
+          <a href="https://www.instagram.com/_v.i.d.a.s_/" target="_blank" rel="noreferrer" aria-label="Instagram">📷</a>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
-      © <span class="current-year"></span> V.I.D.A.S — Todos os direitos reservados.
+      © <span class="current-year"></span> V.I.D.A.S — Todos os direitos reservados. ·
+      <span class="note-example">CNPJ a inserir</span>
     </div>
   </footer>
 
