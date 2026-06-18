@@ -1,5 +1,5 @@
 // =========================================================
-// V.I.D.A.S — script principal (tema, menus, navegação)
+// V.I.D.A.S — script principal (tema, navegação, menus)
 // =========================================================
 
 (function () {
@@ -16,15 +16,13 @@
   }
 
   function applyTheme(isDark) {
-    const html = document.documentElement;
-    if (isDark) html.classList.add("dark");
-    else html.classList.remove("dark");
-
-    document.querySelectorAll(".switch").forEach((el) => el.classList.toggle("on", isDark));
+    document.documentElement.classList.toggle("dark", isDark);
     document.querySelectorAll(".theme-icon").forEach((el) => {
       el.textContent = isDark ? "🌙" : "☀️";
     });
-
+    document.querySelectorAll(".theme-btn").forEach((el) => {
+      el.setAttribute("aria-label", isDark ? "Ativar tema claro" : "Ativar tema escuro");
+    });
     try {
       localStorage.setItem("theme", isDark ? "dark" : "light");
     } catch {}
@@ -33,7 +31,6 @@
   let isDark = getInitialTheme();
   applyTheme(isDark);
 
-  // Acompanha mudanças na preferência do sistema
   if (window.matchMedia) {
     window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
       isDark = e.matches;
@@ -41,31 +38,12 @@
     });
   }
 
-  function toggleTheme() {
-    isDark = !isDark;
-    applyTheme(isDark);
-  }
-
-  /* ---------- MENU DE CONFIGURAÇÕES (engrenagem) ---------- */
-  const settingsBtn = document.querySelector(".settings-btn");
-  const settingsMenu = document.querySelector(".settings-menu");
-
-  if (settingsBtn && settingsMenu) {
-    settingsBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      settingsMenu.classList.toggle("open");
+  document.querySelectorAll(".theme-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      isDark = !isDark;
+      applyTheme(isDark);
     });
-    document.addEventListener("click", (e) => {
-      if (!settingsMenu.contains(e.target) && e.target !== settingsBtn) {
-        settingsMenu.classList.remove("open");
-      }
-    });
-  }
-
-  const themeToggleRow = document.querySelector(".theme-toggle-row");
-  if (themeToggleRow) {
-    themeToggleRow.addEventListener("click", toggleTheme);
-  }
+  });
 
   /* ---------- MENU MOBILE ---------- */
   const mobileToggle = document.querySelector(".mobile-toggle");
@@ -78,7 +56,7 @@
       mobileMenu.classList.toggle("open");
     });
     document.addEventListener("click", (e) => {
-      if (!mobileMenu.contains(e.target) && e.target !== mobileToggle && !mobileToggle.contains(e.target)) {
+      if (!mobileMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
         mobileMenu.classList.remove("open");
         mobileToggle.classList.remove("open");
       }
@@ -105,6 +83,5 @@
     el.textContent = new Date().getFullYear();
   });
 
-  /* ---------- SCROLL AO TOPO EM CADA CARREGAMENTO ---------- */
   window.scrollTo({ top: 0, left: 0, behavior: "auto" });
 })();
