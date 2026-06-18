@@ -14,81 +14,112 @@
     <div class="header-inner">
       <a href="index.html" class="brand">
         <img src="assets/favicon.png" alt="Logo V.I.D.A.S" />
-        <h1>V.I.D.A.S</h1>
+        <span>V.I.D.A.S</span>
       </a>
 
       <nav class="nav-desktop">
         <a href="index.html">Início</a>
         <a href="sobre.html">Sobre</a>
         <a href="fotos.html">Fotos</a>
+        <a href="transparencia.html">Transparência</a>
+        <a href="parcerias.html">Parcerias</a>
         <a href="questoes.html">Perguntas</a>
         <a href="contato.html">Contato</a>
       </nav>
 
-      <div class="settings-wrap">
-        <button class="settings-btn" aria-label="Abrir configurações">⚙️</button>
-        <div class="settings-menu">
-          <div class="theme-toggle-row">
-            <span class="label"><span class="theme-icon">☀️</span> Tema</span>
-            <span class="switch"><span class="knob"></span></span>
-          </div>
-        </div>
+      <div class="header-actions">
+        <a href="doe.html" class="btn btn-primary btn-sm">Doe agora 💛</a>
+        <button class="theme-btn" aria-label="Ativar tema escuro"><span class="theme-icon">☀️</span></button>
+        <button class="mobile-toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
       </div>
     </div>
 
-    <div class="nav-mobile-bar">
-      <button class="mobile-toggle" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="nav-mobile-menu">
-        <a href="index.html">Início</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="fotos.html">Fotos</a>
-        <a href="questoes.html">Perguntas</a>
-        <a href="contato.html">Contato</a>
-      </nav>
-    </div>
+    <nav class="nav-mobile-menu">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="fotos.html">Fotos</a>
+      <a href="transparencia.html">Transparência</a>
+      <a href="parcerias.html">Parcerias</a>
+      <a href="questoes.html">Perguntas</a>
+      <a href="contato.html">Contato</a>
+      <a href="doe.html" class="btn btn-primary btn-block">Doe agora 💛</a>
+    </nav>
   </header>
 
-  <!-- ===================== CONTEÚDO ===================== -->
+  <svg class="bunting" viewBox="0 0 200 26" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <pattern id="flags-top" width="20" height="26" patternUnits="userSpaceOnUse">
+        <line x1="0" y1="4" x2="20" y2="4" stroke="var(--border-ink)" stroke-width="1" stroke-dasharray="2 2"/>
+        <polygon points="1,4 9,4 5,20" fill="var(--bunting-a)" stroke="var(--border-ink)" stroke-width="1"/>
+        <polygon points="11,4 19,4 15,20" fill="var(--bunting-b)" stroke="var(--border-ink)" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="26" fill="url(#flags-top)" />
+  </svg>
+
   <main class="page-bg">
 
     <!-- HERO -->
-    <section class="about-hero">
-      <h1>Sobre o Projeto V.I.D.A.S</h1>
-      <p>
+    <section class="section" style="text-align:center; padding-bottom: 3.5rem;">
+      <span class="eyebrow">📖 Nossa história</span>
+      <h2 class="section-title center">Sobre o Projeto <span class="accent">V.I.D.A.S</span></h2>
+      <p class="section-lead center">
         O V.I.D.A.S é um projeto social que leva alegria, esperança e amor para
         crianças com câncer, promovendo festas, eventos e momentos que ajudam
         a sair um pouco da dura realidade do tratamento.
       </p>
     </section>
 
+    <!-- LINHA DO TEMPO -->
+    <section class="section section-tight bg-surface">
+      <h2 class="section-title center">Como tudo <span class="accent">começou</span></h2>
+      <div class="timeline" style="margin-top:2.5rem;">
+        <div class="timeline-item">
+          <div class="timeline-dot">🎈</div>
+          <p><strong>2022 — A primeira festa*</strong>Um pequeno grupo de voluntários organizou a primeira ação para crianças em tratamento, e percebeu o tamanho do impacto de um dia de alegria.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">🤝</div>
+          <p><strong>2023 — Primeiras parcerias*</strong>O projeto firmou parcerias com hospitais e clínicas para chegar a mais crianças com regularidade.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">🎉</div>
+          <p><strong>2024 — Crescendo junto*</strong>Novos voluntários, novos eventos temáticos e a marca V.I.D.A.S ganhando força nas redes sociais.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">💙</div>
+          <p><strong>Hoje*</strong>Mais de 150 crianças e famílias já viveram um dia de festa com o V.I.D.A.S — e queremos chegar a muito mais.</p>
+        </div>
+      </div>
+      <p style="text-align:center;"><span class="note-example">*linha do tempo de exemplo — substituir pela história real do projeto</span></p>
+    </section>
+
     <!-- SIGNIFICADO -->
     <section class="section">
-      <h2 class="section-title">O significado de V.I.D.A.S</h2>
+      <h2 class="section-title center">O significado de <span class="accent">V.I.D.A.S</span></h2>
 
-      <div class="vidas-grid">
-        <div class="vidas-card">
+      <div class="vidas-grid" style="margin-top:2.5rem;">
+        <div class="sticker sticker--coral vidas-card">
           <img src="assets/vidas/Vitoria.png" alt="Vitória" />
           <h3>V</h3>
           <p>Vitória</p>
         </div>
-        <div class="vidas-card">
+        <div class="sticker sticker--teal vidas-card">
           <img src="assets/vidas/Igualdade.png" alt="Igualdade" />
           <h3>I</h3>
           <p>Igualdade</p>
         </div>
-        <div class="vidas-card">
+        <div class="sticker sticker--yellow vidas-card">
           <img src="assets/vidas/Deus.png" alt="Deus" />
           <h3>D</h3>
           <p>Deus</p>
         </div>
-        <div class="vidas-card">
+        <div class="sticker sticker--grape vidas-card">
           <img src="assets/vidas/Amor.png" alt="Amor" />
           <h3>A</h3>
           <p>Amor</p>
         </div>
-        <div class="vidas-card">
+        <div class="sticker sticker--coral vidas-card">
           <img src="assets/vidas/Saude.png" alt="Saúde" />
           <h3>S</h3>
           <p>Saúde</p>
@@ -96,25 +127,41 @@
       </div>
     </section>
 
+    <!-- EQUIPE -->
+    <section class="section section-tight bg-surface">
+      <h2 class="section-title center">Quem faz a <span class="accent">festa acontecer</span></h2>
+      <p class="section-lead center">Um time pequeno, movido por uma causa grande — e por gente que doa o seu tempo de coração.</p>
+      <div class="stat-row" style="max-width: 30rem; margin-top: 2.5rem;">
+        <div class="stat-balloon">
+          <span class="num">8</span>
+          <span class="lbl">voluntários ativos*</span>
+        </div>
+        <div class="stat-balloon">
+          <span class="num">3</span>
+          <span class="lbl">parceiros institucionais*</span>
+        </div>
+      </div>
+      <p style="text-align:center;"><span class="note-example">*números de exemplo — substituir pelos dados reais</span></p>
+    </section>
+
     <!-- GRÁFICOS -->
     <section class="section charts-grid">
-      <div class="chart-card">
+      <div class="sticker chart-card">
         <h3>Tipos de Ações Realizadas</h3>
         <div class="pie-wrap">
-          <div class="pie" title="Festas Temáticas 40% · Eventos Comemorativos 30% · Ações em Hospitais 20% · Datas Especiais 10%"></div>
+          <div class="pie" style="background: conic-gradient(var(--primary) 0% 40%, var(--secondary) 40% 70%, var(--accent) 70% 90%, var(--grape) 90% 100%);" title="Festas Temáticas 40% · Eventos Comemorativos 30% · Ações em Hospitais 20% · Datas Especiais 10%"></div>
           <ul class="pie-legend">
-            <li><span class="swatch" style="background:#2563eb"></span> Festas Temáticas <span class="pct">40%</span></li>
-            <li><span class="swatch" style="background:#3b82f6"></span> Eventos Comemorativos <span class="pct">30%</span></li>
-            <li><span class="swatch" style="background:#60a5fa"></span> Ações em Hospitais <span class="pct">20%</span></li>
-            <li><span class="swatch" style="background:#93c5fd"></span> Datas Especiais <span class="pct">10%</span></li>
+            <li><span class="swatch" style="background:var(--primary)"></span> Festas Temáticas <span class="pct">40%</span></li>
+            <li><span class="swatch" style="background:var(--secondary)"></span> Eventos Comemorativos <span class="pct">30%</span></li>
+            <li><span class="swatch" style="background:var(--accent)"></span> Ações em Hospitais <span class="pct">20%</span></li>
+            <li><span class="swatch" style="background:var(--grape)"></span> Datas Especiais <span class="pct">10%</span></li>
           </ul>
         </div>
       </div>
 
-      <div class="chart-card">
+      <div class="sticker chart-card">
         <h3>Crescimento do Impacto</h3>
         <svg class="line-chart-svg" viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Gráfico de crescimento do número de crianças impactadas entre 2022 e 2025">
-          <!-- linhas de grade -->
           <line class="grid-line" x1="40" y1="220" x2="390" y2="220" />
           <line class="grid-line" x1="40" y1="178" x2="390" y2="178" />
           <line class="grid-line" x1="40" y1="136" x2="390" y2="136" />
@@ -122,7 +169,6 @@
           <line class="grid-line" x1="40" y1="52"  x2="390" y2="52" />
           <line class="grid-line" x1="40" y1="10"  x2="390" y2="10" />
 
-          <!-- rótulos eixo Y -->
           <text class="axis-label" x="32" y="223" text-anchor="end">0</text>
           <text class="axis-label" x="32" y="181" text-anchor="end">50</text>
           <text class="axis-label" x="32" y="139" text-anchor="end">100</text>
@@ -130,29 +176,49 @@
           <text class="axis-label" x="32" y="55"  text-anchor="end">200</text>
           <text class="axis-label" x="32" y="13"  text-anchor="end">250</text>
 
-          <!-- rótulos eixo X -->
           <text class="axis-label" x="40"  y="238" text-anchor="middle">2022</text>
           <text class="axis-label" x="156" y="238" text-anchor="middle">2023</text>
           <text class="axis-label" x="273" y="238" text-anchor="middle">2024</text>
           <text class="axis-label" x="390" y="238" text-anchor="middle">2025</text>
 
-          <!-- linha de dados -->
           <polyline class="data-line" points="40,186 156,149 273,102 390,44" />
-          <circle class="data-dot" cx="40"  cy="186" r="4" />
-          <circle class="data-dot" cx="156" cy="149" r="4" />
-          <circle class="data-dot" cx="273" cy="102" r="4" />
-          <circle class="data-dot" cx="390" cy="44"  r="4" />
-
-          <text class="legend-text" x="200" y="0" text-anchor="middle" dy="-4">Crianças impactadas por ano</text>
+          <circle class="data-dot" cx="40"  cy="186" r="5" />
+          <circle class="data-dot" cx="156" cy="149" r="5" />
+          <circle class="data-dot" cx="273" cy="102" r="5" />
+          <circle class="data-dot" cx="390" cy="44"  r="5" />
         </svg>
       </div>
     </section>
 
-    <!-- CHAMADA FINAL -->
-    <section class="cta-section">
+    <!-- HISTÓRIAS / DEPOIMENTOS -->
+    <section class="section section-tight bg-surface" id="historias">
+      <span class="eyebrow">💬 Histórias que nos movem</span>
+      <h2 class="section-title">Quem viveu, <span class="accent">conta</span></h2>
+
+      <div class="testimonial-grid cols-3" style="margin-top:2rem;">
+        <div class="sticker sticker--yellow testimonial-card">
+          <div class="quote-mark">“</div>
+          <p class="quote">Por algumas horas, meu filho só pensou em brincar. Foi como se o hospital tivesse ficado longe, só por aquele dia.</p>
+          <div class="who">Mãe de beneficiário<small>depoimento-exemplo, projeto fictício para fins de demonstração</small></div>
+        </div>
+        <div class="sticker sticker--coral testimonial-card">
+          <div class="quote-mark">“</div>
+          <p class="quote">Como voluntária, vejo de perto o quanto uma tarde de festa pode mudar o humor de uma família inteira.</p>
+          <div class="who">Voluntária do projeto<small>depoimento-exemplo, projeto fictício para fins de demonstração</small></div>
+        </div>
+        <div class="sticker sticker--teal testimonial-card">
+          <div class="quote-mark">“</div>
+          <p class="quote">Apoiamos o V.I.D.A.S porque vemos o cuidado real com cada criança e cada família atendida.</p>
+          <div class="who">Parceiro institucional<small>depoimento-exemplo, projeto fictício para fins de demonstração</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-band">
       <h2>Ajudar o próximo é um ato de Amor!</h2>
       <p>Faça parte você também, nos ajude a compartilhar sorrisos 💙</p>
-      <a href="contato.html" class="btn btn-indigo">Quero Ajudar</a>
+      <a href="doe.html" class="btn btn-ghost">Quero Ajudar</a>
     </section>
 
   </main>
@@ -161,38 +227,48 @@
   <footer class="site-footer">
     <div class="footer-grid">
       <div>
-        <h2>V.I.D.A.S</h2>
-        <p>Associação que ajuda crianças com câncer e suas famílias a viver momentos de alegria e esperança.</p>
+        <div class="brand-foot">
+          <img src="assets/favicon.png" alt="Logo V.I.D.A.S" />
+          <span>V.I.D.A.S</span>
+        </div>
+        <p>Associação que transforma o tratamento de crianças com câncer em momentos de festa, alegria e esperança.</p>
       </div>
 
       <div>
-        <h3>Links úteis</h3>
+        <h3>Navegação</h3>
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Início</a></li>
           <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="fotos.html">Fotos</a></li>
           <li><a href="questoes.html">Perguntas</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Doe &amp; participe</h3>
+        <ul class="footer-links">
+          <li><a href="doe.html">Doe agora</a></li>
+          <li><a href="transparencia.html">Transparência</a></li>
+          <li><a href="parcerias.html">Parcerias</a></li>
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </div>
 
       <div>
-        <h3>Contato</h3>
+        <h3>Fale com a gente</h3>
         <ul class="footer-contact">
-          <li>📞 <a href="tel:+5511982002485">+55 (11) 98200 - 2485</a></li>
-          <li>São Paulo, Brasil</li>
+          <li>📞 <a href="tel:+5511982002485">+55 (11) 98200-2485</a></li>
+          <li>📍 São Paulo, Brasil</li>
         </ul>
-      </div>
-
-      <div>
-        <h3>Siga-nos</h3>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/_v.i.d.a.s_/" target="_blank" rel="noreferrer">📷</a>
+        <div class="footer-social" style="margin-top:.75rem;">
+          <a href="https://www.instagram.com/_v.i.d.a.s_/" target="_blank" rel="noreferrer" aria-label="Instagram">📷</a>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
-      © <span class="current-year"></span> V.I.D.A.S — Todos os direitos reservados.
+      © <span class="current-year"></span> V.I.D.A.S — Todos os direitos reservados. ·
+      <span class="note-example">CNPJ a inserir</span>
     </div>
   </footer>
 
