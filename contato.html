@@ -14,150 +14,168 @@
     <div class="header-inner">
       <a href="index.html" class="brand">
         <img src="assets/favicon.png" alt="Logo V.I.D.A.S" />
-        <h1>V.I.D.A.S</h1>
+        <span>V.I.D.A.S</span>
       </a>
 
       <nav class="nav-desktop">
         <a href="index.html">Início</a>
         <a href="sobre.html">Sobre</a>
         <a href="fotos.html">Fotos</a>
+        <a href="transparencia.html">Transparência</a>
+        <a href="parcerias.html">Parcerias</a>
         <a href="questoes.html">Perguntas</a>
         <a href="contato.html">Contato</a>
       </nav>
 
-      <div class="settings-wrap">
-        <button class="settings-btn" aria-label="Abrir configurações">⚙️</button>
-        <div class="settings-menu">
-          <div class="theme-toggle-row">
-            <span class="label"><span class="theme-icon">☀️</span> Tema</span>
-            <span class="switch"><span class="knob"></span></span>
-          </div>
-        </div>
+      <div class="header-actions">
+        <a href="doe.html" class="btn btn-primary btn-sm">Doe agora 💛</a>
+        <button class="theme-btn" aria-label="Ativar tema escuro"><span class="theme-icon">☀️</span></button>
+        <button class="mobile-toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
       </div>
     </div>
 
-    <div class="nav-mobile-bar">
-      <button class="mobile-toggle" aria-label="Abrir menu">
-        <span></span><span></span><span></span>
-      </button>
-      <nav class="nav-mobile-menu">
-        <a href="index.html">Início</a>
-        <a href="sobre.html">Sobre</a>
-        <a href="fotos.html">Fotos</a>
-        <a href="questoes.html">Perguntas</a>
-        <a href="contato.html">Contato</a>
-      </nav>
-    </div>
+    <nav class="nav-mobile-menu">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="fotos.html">Fotos</a>
+      <a href="transparencia.html">Transparência</a>
+      <a href="parcerias.html">Parcerias</a>
+      <a href="questoes.html">Perguntas</a>
+      <a href="contato.html">Contato</a>
+      <a href="doe.html" class="btn btn-primary btn-block">Doe agora 💛</a>
+    </nav>
   </header>
 
-  <!-- ===================== CONTEÚDO ===================== -->
-  <main class="contact-page">
-    <h1>Entre em contato conosco</h1>
-    <p>
-      Fale com a equipe <strong>V.I.D.A.S</strong>. Estamos prontos para ouvir
-      ideias, dúvidas, sugestões e também para receber quem deseja fazer parte
-      das nossas ações.
-    </p>
+  <svg class="bunting" viewBox="0 0 200 26" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <pattern id="flags-top" width="20" height="26" patternUnits="userSpaceOnUse">
+        <line x1="0" y1="4" x2="20" y2="4" stroke="var(--border-ink)" stroke-width="1" stroke-dasharray="2 2"/>
+        <polygon points="1,4 9,4 5,20" fill="var(--bunting-a)" stroke="var(--border-ink)" stroke-width="1"/>
+        <polygon points="11,4 19,4 15,20" fill="var(--bunting-b)" stroke="var(--border-ink)" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="26" fill="url(#flags-top)" />
+  </svg>
 
-    <!-- TELEFONE -->
-    <div class="contact-grid" style="max-width: 28rem;">
-      <div class="info-card">
-        <div class="icon">📞</div>
-        <h3>Telefone</h3>
-        <p>+55 (11) 98200 - 2485</p>
-      </div>
-    </div>
-
-    <!-- DOAÇÕES -->
-    <div class="donation-block">
-      <h2>Doações</h2>
-      <p>
-        Ao contribuir com as nossas ações, você estará ajudando a realizar
-        sonhos e transformar dores em sorrisos.
+  <main class="page-bg">
+    <section class="section" style="text-align:center; padding-bottom:1rem;">
+      <span class="eyebrow">💬 Fale com a gente</span>
+      <h2 class="section-title center">Vamos <span class="accent">conversar?</span></h2>
+      <p class="section-lead center">
+        Dúvidas, ideias, parcerias ou vontade de ajudar — escolha o canal que
+        preferir, estamos por aqui.
       </p>
-      <p>
-        Todo valor arrecadado é destinado à compra de alimentos, locação de
-        espaços, brinquedos, entretenimento, decoração, transporte e tudo o que
-        for necessário para a realização de cada ação.
-        <br />
-        <strong>Ajudar o próximo é um ato de amor.</strong>
-      </p>
+    </section>
 
-      <div class="pix-card">
-        <div class="icon">💲</div>
-        <h3>PIX</h3>
-        <p>
-          Chave: <strong>11 98200 2485</strong><br />
-          Nome: <strong>Andreia da Silva Barbosa Martins</strong><br />
-          Banco: <strong>NUBANK</strong>
-        </p>
-        <button id="copy-pix-btn" class="btn btn-indigo">Copiar chave PIX</button>
+    <section class="section section-tight contact-layout">
+      <div style="display:flex; flex-direction:column; gap:1.25rem;">
+        <div class="sticker sticker--coral info-card">
+          <div class="icon">📞</div>
+          <h3>Telefone / WhatsApp</h3>
+          <p><a href="tel:+5511982002485">+55 (11) 98200-2485</a></p>
+        </div>
+        <div class="sticker sticker--teal info-card">
+          <div class="icon">📍</div>
+          <h3>Onde estamos</h3>
+          <p>São Paulo, Brasil</p>
+        </div>
+        <div class="sticker sticker--grape info-card">
+          <div class="icon">📷</div>
+          <h3>Instagram</h3>
+          <p><a href="https://www.instagram.com/_v.i.d.a.s_/" target="_blank" rel="noreferrer">@_v.i.d.a.s_</a></p>
+        </div>
       </div>
-    </div>
+
+      <div class="sticker sticker--yellow form-card">
+        <h3 style="margin-bottom:1.25rem;">Envie uma mensagem</h3>
+        <form id="contact-form">
+          <div class="form-row">
+            <label for="cf-name">Nome</label>
+            <input id="cf-name" name="name" type="text" required placeholder="Seu nome" />
+          </div>
+          <div class="form-row">
+            <label for="cf-message">Mensagem</label>
+            <textarea id="cf-message" name="message" rows="4" required placeholder="Como podemos ajudar?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Enviar pelo WhatsApp 💬</button>
+        </form>
+        <p class="note-example" style="margin-top:.75rem;">*o envio abre o WhatsApp com a mensagem pronta para o número +55 (11) 98200-2485</p>
+      </div>
+    </section>
 
     <!-- COMO AJUDAR -->
-    <div class="help-block">
-      <h2>Como ajudar?</h2>
-      <div class="help-grid">
-        <div class="help-card">
-          <div class="icon">🔗</div>
+    <section class="section section-tight bg-surface">
+      <h2 class="section-title center">Outras formas de <span class="accent">ajudar</span></h2>
+      <div class="benefit-grid" style="margin-top:2.5rem;">
+        <div class="sticker sticker--coral benefit-card">
+          <div class="ico">🔗</div>
           <p>Divulgando, seguindo e compartilhando nossas redes sociais e ações.</p>
         </div>
-        <div class="help-card">
-          <div class="icon">❤️</div>
+        <div class="sticker sticker--teal benefit-card">
+          <div class="ico">❤️</div>
           <p>Doando itens, recursos ou oferecendo algum tipo de serviço.</p>
         </div>
-        <div class="help-card">
-          <div class="icon">👥</div>
-          <p>Com o seu tempo — você será sempre bem-vindo(a) para ajudar e ver de perto o que fazemos.</p>
+        <div class="sticker sticker--grape benefit-card">
+          <div class="ico">👥</div>
+          <p>Com o seu tempo — você será sempre bem-vindo(a) para ajudar de perto.</p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- INSTAGRAM -->
-    <div class="insta-link-wrap">
-      <a href="https://www.instagram.com/_v.i.d.a.s_/" target="_blank" rel="noreferrer" class="insta-btn">
-        📷 <span>Siga-nos no Instagram</span>
-      </a>
-    </div>
+    <!-- CTA -->
+    <section class="cta-band">
+      <h2>Pronto para fazer parte? 🎈</h2>
+      <p>Sua doação, parceria ou voluntariado já é um motivo de festa para a gente.</p>
+      <a href="doe.html" class="btn btn-ghost">Doe agora</a>
+    </section>
   </main>
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="site-footer">
     <div class="footer-grid">
       <div>
-        <h2>V.I.D.A.S</h2>
-        <p>Associação que ajuda crianças com câncer e suas famílias a viver momentos de alegria e esperança.</p>
+        <div class="brand-foot">
+          <img src="assets/favicon.png" alt="Logo V.I.D.A.S" />
+          <span>V.I.D.A.S</span>
+        </div>
+        <p>Associação que transforma o tratamento de crianças com câncer em momentos de festa, alegria e esperança.</p>
       </div>
 
       <div>
-        <h3>Links úteis</h3>
+        <h3>Navegação</h3>
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html">Início</a></li>
           <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="fotos.html">Fotos</a></li>
           <li><a href="questoes.html">Perguntas</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Doe &amp; participe</h3>
+        <ul class="footer-links">
+          <li><a href="doe.html">Doe agora</a></li>
+          <li><a href="transparencia.html">Transparência</a></li>
+          <li><a href="parcerias.html">Parcerias</a></li>
           <li><a href="contato.html">Contato</a></li>
         </ul>
       </div>
 
       <div>
-        <h3>Contato</h3>
+        <h3>Fale com a gente</h3>
         <ul class="footer-contact">
-          <li>📞 <a href="tel:+5511982002485">+55 (11) 98200 - 2485</a></li>
-          <li>São Paulo, Brasil</li>
+          <li>📞 <a href="tel:+5511982002485">+55 (11) 98200-2485</a></li>
+          <li>📍 São Paulo, Brasil</li>
         </ul>
-      </div>
-
-      <div>
-        <h3>Siga-nos</h3>
-        <div class="footer-social">
-          <a href="https://www.instagram.com/_v.i.d.a.s_/" target="_blank" rel="noreferrer">📷</a>
+        <div class="footer-social" style="margin-top:.75rem;">
+          <a href="https://www.instagram.com/_v.i.d.a.s_/" target="_blank" rel="noreferrer" aria-label="Instagram">📷</a>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
-      © <span class="current-year"></span> V.I.D.A.S — Todos os direitos reservados.
+      © <span class="current-year"></span> V.I.D.A.S — Todos os direitos reservados. ·
+      <span class="note-example">CNPJ a inserir</span>
     </div>
   </footer>
 
